@@ -1,0 +1,37 @@
+# Basic page routing configuration
+
+[[pages]]
+path = "pages/overview.py"
+name = "Overview"
+
+[[pages]]
+path = "pages/1_Project_Dashboard.py"
+name = "Project Dashboard"
+
+[[pages]]
+path = "pages/2_Need_Help.py"
+name = "Need Help?"
+
+[[pages]]
+path = "pages/basic_01.py"
+name = "Basic 01"
+
+[[pages]]
+path = "pages/basic_02.py"
+name = "Basic 02"
+
+[[pages]]
+path = "pages/basic_03.py"
+name = "Basic 03"
+
+[[pages]]
+path = "pages/advanced_01.py"
+name = "Advanced 01"
+
+[[pages]]
+path = "pages/advanced_02.py"
+name = "Advanced 02"
+
+[[pages]]
+path = "pages/advanced_03.py"
+name = "Advanced 03" 

@@ -1,0 +1,70 @@
+# NVIDIA AI Workbench Tutorial
+An interactive web application that guides you through the features of NVIDIA AI Workbench. 
+It's self-paced with hands-on exercises and step-by-step guidance for both basic and advanced workflows.
+
+## Description
+This tutorial application is built using Streamlit and provides an interactive learning experience for NVIDIA AI Workbench. It covers everything from basic project setup to advanced features like environment customization and container management. The tutorial is designed to be self-paced and includes validation checks to ensure proper understanding of each concept.
+
+## Features
+- Interactive step-by-step tutorials
+- Real-time validation of completed tasks
+- Progress tracking across sessions
+- Multi-language support
+- Comprehensive coverage from basics to advanced topics
+
+## Tutorial Structure
+The tutorial is organized into progressive sections:
+
+### Basic Tutorials
+1. Getting Started with AI Workbench
+   - Creating your first project
+   - Using JupyterLab
+   - Basic Git operations
+   
+2. Environment Customization
+   - Adding packages
+   - Rebuilding environments
+   - Testing new dependencies
+
+3. Project Structure and Management
+   - Understanding project components
+   - Data persistence
+   - Environment configuration
+
+### Advanced Tutorials
+1. Advanced Environment Configuration
+2. Custom Container Usage
+3. Advanced RAG Applications
+
+## Getting Started
+
+1. Prerequisites
+   - NVIDIA AI Workbench installed on your system
+   - 15 to 30 minutes of time
+
+2. Launch the Tutorial application from the Project View
+
+3. Follow Along
+   - Start with the basic exercises
+   - Complete each task in sequence
+   - Verify your progress with built-in validation
+   - Move to advanced topics when ready
+
+## Development
+This tutorial app uses a template-based system for content management:
+- Python files (`*.py`) handle logic and interaction
+- YAML files (`*.en_US.yaml`) contain tutorial content
+- Test files ensure proper task completion
+
+### Adding New Tutorials
+1. Copy the template files:
+   - `template.py` → `your_tutorial.py`
+   - `template.en_US.yaml` → `your_tutorial.en_US.yaml`
+2. Update the content in the YAML file
+3. Implement necessary test functions
+4. Update navigation links
+
+## License
+This project is licensed under the Apache License, Version 2.0. See the LICENSE file for details.
+
+This project may utilize additional third-party open source software projects. Review the license terms of these open source projects before use. Third party components used as part of this project are subject to their separate legal notices or terms that accompany the components. You are responsible for confirming compliance with third-party component license terms and requirements.

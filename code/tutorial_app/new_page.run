@@ -1,0 +1,44 @@
+#!/usr/bin/env ansible-playbook
+- name: "Create a new page."
+  hosts: localhost
+  gather_facts: false
+  become: false
+
+  vars:
+    page_type: template
+
+  vars_prompt:
+    - name: page_name
+      prompt: "Name of the new page (eg: basic_02)"
+      private: false
+    - name: page_emoji
+      prompt: "Emoji for the new page"
+      private: false
+      default: 🦖
+    - name: page_title
+      prompt: "Page Title"
+      private: false
+      default: New Page
+    - name: page_header
+      prompt: "Excercise Header"
+      private: false
+      default: Creating a New Page
+
+  tasks:
+
+    - name: "Render the page files."
+      ansible.builtin.template:
+        src: "pages_templates/{{ page_type }}{{ item }}.j2"
+        dest: "pages/{{ page_name }}{{ item }}"
+        mode: "0755"
+        backup: true
+      with_items:
+        - ".py"
+        - "_tests.py"
+        - ".en_US.yaml"
+
+    - name: "Add new page to sidebar."
+      ansible.builtin.lineinfile:
+        path: "pages/sidebar.yaml"
+        insertbefore: "## INSERT HERE ##"
+        line: '      - {"label": "{{ page_emoji }} {{ page_title }}", "target": "{{ page_name }}"}'

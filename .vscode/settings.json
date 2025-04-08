@@ -1,0 +1,87 @@
+{
+    // file explorer configuration
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/.venv": true,
+      "**/__pycache__": true,
+      "**/.mypy_cache": true,
+      "**/.ipynb_checkpoints": true,
+      "**/.terraform": true,
+    },
+
+
+    // global editor settings
+    "files.eol": "\n",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "files.insertFinalNewline": true,
+    // remove this line to automatically forward ports
+    // in general, workbench will manage this already
+    "remote.autoForwardPorts": false,
+
+
+    // bash scripting configuration
+    "[shellscript]": {
+      "editor.tabSize": 4,
+      "editor.insertSpaces": false,
+    },
+
+
+    // css style sheet configuration
+    "[css]": {
+      "editor.suggest.insertMode": "replace",
+      "editor.tabSize": 2
+    },
+
+    // js configuration
+    "[javascript]": {
+      "editor.maxTokenizationLineLength": 2500,
+      "editor.tabSize": 2,
+    },
+
+    // yaml configuration
+    "[yaml]": {
+      "files.trimTrailingWhitespace": false,
+      "editor.renderWhitespace": "boundary"
+    },
+
+    // Python environment configuration
+    "python.terminal.activateEnvironment": true,
+    "isort.args":["--profile", "black"],
+    "isort.check": true,
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      },
+      //  Comment out this settings to disable auto-formatting
+      "editor.formatOnSave": true
+    },
+
+    "black-formatter.serverTransport": "stdio",
+    "black-formatter.args": [
+      "--line-length",
+      "120"
+    ],
+    "pylint.severity": {
+      "refactor": "Information",
+    },
+    "pylint.importStrategy": "fromEnvironment",
+    "black-formatter.importStrategy": "fromEnvironment",
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "pylint.cwd": "${workspaceFolder}/code/tutorial_app",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "*.py": "${capture}.*.yaml, ${capture}_tests.py"
+    },
+    "todo-tree.filtering.scopes": [],
+    "ansible.python.interpreterPath": "/usr/bin/python3",
+    "files.associations": {
+      "*.run": "ansible"
+    }
+  }
