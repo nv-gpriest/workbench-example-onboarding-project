@@ -2,6 +2,10 @@
 An interactive web application that guides you through the features of NVIDIA AI Workbench. 
 It's self-paced with hands-on exercises and step-by-step guidance for both basic and advanced workflows.
 
+*Navigating the README*: [Prerequisites](#prerequisites) | [Description](#description) | [Features](#features) | [Tutorial Structure](#tutorial-structure) | [Get Started](#get-started) | [Development](#development) | [License](#license)
+
+*Other Resources*: [:arrow_down: Download AI Workbench](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/) | [:book: User Guide](https://docs.nvidia.com/ai-workbench/) |[:open_file_folder: Other Projects](https://docs.nvidia.com/ai-workbench/user-guide/latest/quickstart/example-projects.html) | [:rotating_light: User Forum](https://forums.developer.nvidia.com/t/support-workbench-example-project-onboarding-project/329786)
+
 ## Prerequisites
  - NVIDIA AI Workbench installed on your system
  - 15 to 30 minutes of time
