@@ -43,7 +43,7 @@ with theme.Theme(autorefresh=False, ephemeral=True):
             "https://ngc.nvidia.com/open-ai-workbench/aHR0cHM6Ly9naXRodWIuY29tL05WSURJQS1BSS1CbHVlcHJpbnRzL3BkZi10by1wb2RjYXN0"
         ],
         "Support Forum": [
-            "https://forums.developer.nvidia.com/t/support-workbench-example-blueprint-pdf-to-podcast/321467"
+            "https://forums.developer.nvidia.com/t/support-workbench-example-blueprint-pdf-to-podcast/329784"
         ],
     }
 
