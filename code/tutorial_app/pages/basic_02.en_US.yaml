@@ -119,19 +119,20 @@ tasks:
 
     test: write_some_code
 
-  - name: Add a Python Package (`plotly`)
+  - name: Add Python Packages
     msg: |
-      ##### Let's install `plotly` through the package manager.
+      ##### Let's install `plotly` and `numpy` through the package manager.
 
       - Go to **Environment > Project Container > Packages**
       - Click **Add** in the top right of the section
       - Select **pip** as the package manager
-      - Enter `plotly` as the package name
+      - Enter `plotly` as the package name and click **Add**
+      - Enter `numpy` as  the package name and click **Add**
       - Click **Submit**
 
-    test: add_python_package_1
+    test: add_python_packages
     response: |
-      ##### Plotly was added, and if you run the cell again, it should work.
+      ##### Plotly and Numpy have been installed. If you restart your Jupyter Kernel and rerun the cell, it should work.
 
       > **Note:** Installing packages through the Desktop App does a few things.
       >  - Workbench writes the package to  `requirements.txt`. Go to **Git > Changes** to see this. 

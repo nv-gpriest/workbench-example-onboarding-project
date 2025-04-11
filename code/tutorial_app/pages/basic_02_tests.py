@@ -79,14 +79,9 @@ def write_some_code():
         raise testing.TestFail("info_wait_for_code")
 
 
-def add_python_package_1():
+def add_python_packages():
     """Wait for the package to be added."""
     pkg = testing.ensure_package(PROJECT_NAME, "pip", PYTHON_PACKAGE_1)
-    return pkg
-
-
-def add_python_package_2():
-    """Wait for the package to be added."""
     pkg = testing.ensure_package(PROJECT_NAME, "pip", PYTHON_PACKAGE_2)
     return pkg
 
