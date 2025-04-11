@@ -132,7 +132,7 @@ tasks:
 
     test: add_python_packages
     response: |
-      ##### Plotly and Numpy have been isntalled. If you restart your Jupyter Kernel and rerun the cell, it should work.
+      ##### Plotly and Numpy have been installed. If you restart your Jupyter Kernel and rerun the cell, it should work.
 
       > **Note:** Installing packages through the Desktop App does a few things.
       >  - Workbench writes the package to  `requirements.txt`. Go to **Git > Changes** to see this. 
