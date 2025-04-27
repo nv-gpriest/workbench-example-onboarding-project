@@ -112,7 +112,7 @@ def rebuild_environment():
 def wait_for_project_stop():
     """Wait for the project to stop."""
     project = testing.get_project(PROJECT_NAME)
-    target = testing.RunState.NOT_RUNNING
+    target = [testing.RunState.NOT_RUNNING, testing.RunState.CONTAINER_NOT_CREATED]
     testing.ensure_run_state(project, target)
 
 

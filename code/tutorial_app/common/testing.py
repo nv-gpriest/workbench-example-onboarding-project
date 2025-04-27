@@ -139,8 +139,11 @@ def ensure_run_state(project: GQLDataType, target: RunState):
         # if this happens, workbench is returning an unrecognized value
         raise TestFail("Unkown project run state")
 
+    if not isinstance(target, list):
+        target = [target]
+
     # return if desired state has been reached
-    if state == target:
+    if state in target:
         return
 
     # throw state specific error
