@@ -104,26 +104,7 @@ environment:
             target: ""
     compose_file_path: ""
 execution:
-    apps:
-        - name: Tutorial 2
-          type: custom
-          class: webapp
-          start_command: |
-            cd /project/code/tutorial_app && \
-                       export PROXY_PREFIX && \
-                            streamlit run streamlit_app.py --server.baseUrlPath=$PROXY_PREFIX
-          health_check_command: curl -I http://localhost:8501
-          stop_command: pkill -f 'streamlit run streamlit_app.py'
-          user_msg: Duplicate of Tutorial for learning purposes.
-          logfile_path: ""
-          timeout_seconds: 30
-          icon_url: ""
-          webapp_options:
-            autolaunch: true
-            port: "8501"
-            proxy:
-                trim_prefix: false
-            url: http://localhost:8501
+    apps: []
     resources:
         gpu:
             requested: 0
