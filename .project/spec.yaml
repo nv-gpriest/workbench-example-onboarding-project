@@ -23,8 +23,8 @@ layout:
 environment:
     base:
         registry: nvcr.io
-        image: nvidia/ai-workbench/python-basic:1.0.6
-        build_timestamp: "20250205043314"
+        image: nvidia/ai-workbench/python-basic:1.0.2
+        build_timestamp: "20241001182612"
         name: Python Basic
         supported_architectures: []
         cuda_version: ""
@@ -35,7 +35,7 @@ environment:
             - python3
             - jupyterlab
         apps:
-         - name: Tutorial
+            - name: Tutorial
               type: custom
               class: webapp
               start_command: |
@@ -74,7 +74,7 @@ environment:
         programming_languages:
             - python3
         icon_url: https://workbench.download.nvidia.com/static/img/ai-workbench-icon-rectangle.jpg
-        image_version: 1.0.6
+        image_version: 1.0.5
         os: linux
         os_distro: ubuntu
         os_distro_release: "22.04"
@@ -98,7 +98,7 @@ environment:
             - name: pip
               binary_path: /usr/bin/pip
               installed_packages:
-                - jupyterlab==4.2.5
+                - jupyterlab==4.2.4
         package_manager_environment:
             name: ""
             target: ""
