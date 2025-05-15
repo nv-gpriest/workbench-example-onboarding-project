@@ -23,8 +23,8 @@ layout:
 environment:
     base:
         registry: nvcr.io
-        image: nvidia/ai-workbench/python-basic:1.0.6
-        build_timestamp: "20250205043314"
+        image: nvidia/ai-workbench/python-basic:1.0.2
+        build_timestamp: "20241001182612"
         name: Python Basic
         supported_architectures: []
         cuda_version: ""
@@ -35,6 +35,26 @@ environment:
             - python3
             - jupyterlab
         apps:
+         - name: Tutorial
+              type: custom
+              class: webapp
+              start_command: |
+                cd /project/code/tutorial_app && \
+                export PROXY_PREFIX && \
+                streamlit run streamlit_app.py --server.baseUrlPath=$PROXY_PREFIX
+              health_check_command: curl -I http://localhost:8501
+              stop_command: |
+                pkill -f 'streamlit run streamlit_app.py'
+              user_msg: ""
+              logfile_path: ""
+              timeout_seconds: 30
+              icon_url: ""
+              webapp_options:
+                autolaunch: true
+                port: "8501"
+                proxy:
+                    trim_prefix: false
+                url: http://localhost:8501
             - name: jupyterlab
               type: jupyterlab
               class: webapp
